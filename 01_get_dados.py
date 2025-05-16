@@ -20,7 +20,7 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator, BinaryClass
 dbutils.fs.put("/FileStore/kaggle.json", """
 {
   "username":"ldalposso",
-  "key":"312105743e1a687ce7f7df7a52fcee4a"
+  "key":"xxx"
 }
 """, overwrite=True)
 
