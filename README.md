@@ -1,13 +1,10 @@
-# 📘 Notebook: 01_get_dados.py
-
-Este notebook tem como objetivo preparar o ambiente, autenticar na API do Kaggle, baixar o dataset de detecção de fraudes em cartões de crédito e carregá-lo em um DataFrame do Spark, com persistência em uma tabela Delta para análises futuras.
-
+## 📘 Notebook: 01_get_dados.py 01_get_dados.py 
+Tem objetivo em fazer a coleta de dados utilizando a API do Kaggle, baixando o dataset de detecção de fraudes em cartão de crédito e carregá-lo em um Dataframe Spark e persisti-lo em uma tabela delta para consumo futuro.
 ---
-
-## 🧾 Etapas do Notebook
-
+<details>
+  <summary><strong>📖 Clique para expandir a explicação do notebook</strong></summary>
+  
 ### 🔧 1. Instalação de Pacotes
-
 Instala bibliotecas essenciais para manipulação de dados, visualização, balanceamento de classes e machine learning com PySpark:
 
 ```bash
@@ -73,7 +70,4 @@ SELECT * FROM credit_card_fraud LIMIT 5
 ```
 
 ---
-
-## 🎯 Objetivo Final
-
-Preparar o ambiente e carregar o dataset de fraudes de cartão de crédito para uso em análises e modelos de machine learning, com persistência em formato otimizado (Delta Table).
+</details>
