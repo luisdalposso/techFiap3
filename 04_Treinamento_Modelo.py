@@ -20,7 +20,7 @@ from databricks import automl
 
 # COMMAND ----------
 
-df_treino = spark.read.table("sicredi_coop_0903.int.cartao_fraude_treino_final")
+df_treino = spark.read.table("_0903.int.cartao_fraude_treino_final")
 
 # COMMAND ----------
 
@@ -52,7 +52,7 @@ print(summary_normalized)
 # COMMAND ----------
 
 import mlflow
-catalog = "sicredi_coop_0903"
+catalog = "_0903"
 schema = "int"
 model_name = "modelo_detec_fraude"
 mlflow.set_registry_uri("databricks-uc")
