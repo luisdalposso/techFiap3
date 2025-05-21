@@ -12,7 +12,7 @@ mlflow.set_registry_uri("databricks-uc")
 # COMMAND ----------
 
 # DBTITLE 1,Configurações do modelo de propensão à inadimplência
-model_name = "sicredi_coop_0903.int.modelo_detec_fraude"
+model_name = "_0903.int.modelo_detec_fraude"
 suffix = "production"
 
 # COMMAND ----------
@@ -66,7 +66,7 @@ def process_table(df,p_tipo_carga,p_data):
 # DBTITLE 1,Seleciona as linhas com antecedencia de vencimento = 15
 # MAGIC %sql
 # MAGIC select distinct * 
-# MAGIC FROM sicredi_coop_0903.int.cartao_deploy
+# MAGIC FROM _0903.int.cartao_deploy
 
 # COMMAND ----------
 
@@ -76,7 +76,7 @@ df_deploy=_sqldf
 # COMMAND ----------
 
 # DBTITLE 1,Seleciona o modelo e o sufixo
-model_name = "sicredi_coop_0903.int.modelo_detec_fraude"
+model_name = "_0903.int.modelo_detec_fraude"
 suffix = "production"
 
 # COMMAND ----------
@@ -157,7 +157,7 @@ if df_deploy.count() > 0:
 #Persiste a Tabela
 #Alterar para delta de data_geracao
 if df_deploy.count() > 0:
-    table_name = 'sicredi_coop_0903.exp.cartao_deploy_diaria'
+    table_name = '_0903.exp.cartao_deploy_diaria'
     # Checando se df_deploy_pandas está vazio
 
     if not sdf_result.rdd.isEmpty():
