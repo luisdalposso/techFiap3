@@ -17,7 +17,7 @@ from pyspark.sql.functions import col, hour, when
 
 # COMMAND ----------
 
-df = spark.read.table("sicredi_coop_0903.int.cartao_fraude_treino")
+df = spark.read.table("_0903.int.cartao_fraude_treino")
 
 # COMMAND ----------
 
@@ -41,7 +41,7 @@ df_modelo.display()
 # COMMAND ----------
 
 try:
-    df.write.format("delta").mode("overwrite").saveAsTable("sicredi_coop_0903.int.cartao_fraude_treino_final")
-    print("\n7. Tabela 'sicredi_coop_0903.int.cartao_fraude_treino_final' criada com sucesso!")
+    df.write.format("delta").mode("overwrite").saveAsTable("_0903.int.cartao_fraude_treino_final")
+    print("\n7. Tabela '_0903.int.cartao_fraude_treino_final' criada com sucesso!")
 except Exception as e:
     print(f"\n⚠️ AVISO: Não foi possível persistir ({str(e)})")
